@@ -25,10 +25,6 @@ Syllabus
 -Unit Testing (JEST)
 -EsLint
 
-
-
-
-
 React Local Setup
 =================
 1. download Nodejs and install
@@ -50,8 +46,6 @@ React Local Setup
 6. A new browser window will pop up with your newly created React App!
    open a browser tab and type 'http://localhost:3000/' if browser doesn't open automatically.
 
-
-
 React Project with Typescript
 =============================
 -Create React App supports TypeScript out of the box.
@@ -60,8 +54,6 @@ React Project with Typescript
 -To add TypeScript to an existing Create-React-App project, install the below things
  npm install --save typescript @types/node @types/react @types/react-dom @types/jest
 
-
-
 create-react-app
 ================
 -It is a React application boilerplate generator created by Facebook.
@@ -69,16 +61,12 @@ create-react-app
 -It provides a development environment configured for ease-of-use with minimal setup.
 -It creates a frontend build pipeline. Under the hood, it uses Babel and webpack.
 
-
-
 NPX
 ===
 -NPX : node package executer.
 -Its a Package runner/executer tool.
 -It can execute any package that you want from the npm registry without even installing that package.
  ex: npx create-react-app my-app
-
-
 
 What React is
 =============
@@ -88,9 +76,6 @@ What React is
 -React is used to build single page applications.
 -React allows us to create reusable UI components.
 -ReactJS uses virtual DOM based mechanism to fill in data (views) in HTML DOM.
-
-
-
 
 React is NOT a framework
 ========================
@@ -102,7 +87,6 @@ Let's take an example:
 -Angular, on the other hand, is a framework because it handles much more than the UI
  (It handles Dependency Injection, CSS encapsulation, httpClient, Form validation, routing etc.)
 
-
 	Framework										Library
 =========================================================================
 -group of libraries to make your work easier	-performs specific, well-defined operations
@@ -112,8 +96,6 @@ Let's take an example:
 -cann't be easily replaceable 					-can be easily replaceable by another
 -angular,vue									-jQuery,ReactJs,lodash,moment
 -Hospital with full of doctors					-A doctor who specializes in one
-
-
 
 		React						Angular
 ===========================================================
@@ -128,9 +110,6 @@ Let's take an example:
 9. extra libraries needed		 9. No additional libraries
 10. UI heavy					 10. Functionality Heavy
 
-
-
-
 React Features
 ==============
 -JSX
@@ -140,8 +119,6 @@ React Features
 -Easy to learn because of its simple Design
 -Performance
 
-
-
 Why virtual DOM?
 ===============
 -Frequent DOM manipulations are expensive and performance heavy.
@@ -149,7 +126,6 @@ Why virtual DOM?
  run layout and repaint the web page.
 -we need a way to minimize the time it takes to repaint the screen.
  This is where the Virtual DOM comes in.
-
 
 What Virtual DOM is
 ===================
@@ -159,8 +135,6 @@ What Virtual DOM is
 -When state changes occur, the virtual DOM is updated and the previous and current version of  virtual DOM is compared. This is called “diffing”.
 -It then makes sure that batched updates are sent to the real DOM for repainting or re-rendering of the UI.
 -React never reads from real DOM, only writes to it.
-
-
 
 How does React Work? (Virtual DOM)
 ====================
@@ -179,14 +153,10 @@ b. Compare the old Virtual DOM (which represents the current HTML DOM) vs the ne
    DOM.
 c. Based on (b) find the minimum number of operations to transform the old Virtual DOM (which represents the current HTML DOM) into the new Virtual DOM.
 
-
-
 What is the difference between Shadow DOM and Virtual DOM?
 ==========================================================
 -The Shadow DOM is a browser technology designed primarily for scoping variables and CSS in web components.
 -The Virtual DOM is a concept implemented by libraries in JavaScript(React) on top of browser APIs.
-
-
 
 ReactDOM
 ========
@@ -195,16 +165,10 @@ ReactDOM
 -The reason why the Virtual DOM exists is to figure out which parts of the UI need to be updated and then batch these changes together.
 -ReactDOM receives those instructions from React and then efficiently updates the DOM.
 
-
-
-
 Web Browser Workflow
 ====================
 Parsing HTML to construct DOM tree --> Render Tree construction --> Layout of the Render tree -->
  -->painting the render tree.
-
-
-
 
 React Reconciliation
 ====================
@@ -213,7 +177,6 @@ React Reconciliation
 -Reconciliation is the mechanism that tracks changes in a component state and renders
  the updated state to the screen.
 -It's a step that happens between the render() function being called and the displaying of elements on the screen. This entire process is called reconciliation.
-
 
 Stack Reconciler < React-16
 ================
@@ -240,8 +203,6 @@ Fiber Reconciler
  -React tells the DOM to render the changes that was created in the previous phase.
  -the Reconciliation phase can be interrupted, the Commit phase cannot.
 
-
-
 React Project - Folder Structure
 ================================
 node_modules/	:  Provides npm packages to the entire workspace. Workspace-wide node_modules dependencies are visible to all projects.
@@ -252,9 +213,6 @@ package.json	:  Configures npm package dependencies that are available to all pr
 package-lock.json : Provides version information for all packages installed into node_modules by the npm client.
 README.md		: Introductory documentation for the application.
 
-
-
-
 React Project Flow
 ==================
 1. index.html  --> <div id="root"></div> (container to inject component)
@@ -262,8 +220,6 @@ React Project Flow
 				   root.render(<App />)
                    where        what
 3. App.js      -->  AppComponent Code
-
-
 
 JSX
 ===
@@ -281,9 +237,6 @@ JSX
  <img /> 		valid
 -Since JSX is closer to JavaScript than to HTML, React DOM uses camelCase property naming convention instead of HTML attribute names.
 -ex: class becomes className in JSX, and tabindex becomes tabIndex.
-
-
-
 
 React Without JSX
 =================
@@ -304,8 +257,6 @@ ex:  <div class='test'>This is a div</div>
 return React.createElement("div", {
     class: "test"
   }, "This is a div");
-
-
 
 React Element
 =============
@@ -330,9 +281,6 @@ const hello = React.createElement(
 -document.createElement() returns a DOM element (for example a div or an h1).
  Whereas React.createElement() returns an object that represents the DOM element.
 
-
-
-
 Module Systems
 ==============
 1. CommonJS
@@ -343,7 +291,6 @@ Module Systems
    export default member2;
    import DefaultMember , {Namedmember} from 'file'
 
-
 imports & exports
 =================
 -Default import:
@@ -352,7 +299,6 @@ imports & exports
   import { name1, name2 } from 'src/my_lib';
 -Combining a default import with named imports
   import DefaultMember, { name1, name2 } from 'src/my_lib';
-
 
 Named Export vs Default Export
 ==============================
@@ -365,8 +311,6 @@ Named Export vs Default Export
 ex: import MyReact, { MyComponent } from "react";
            correct    wrong-namedExport
 
-
-
 The React object
 ================
 -When we import React,we get a React object that contains methods and properties.
@@ -376,8 +320,6 @@ The React object
  <h2>React Version is {React.version}</h2>
 -in cmd run the below command
  npm view react version
-
-
 
 React Emmet (react snippets - plugin)
 ===========
@@ -400,7 +342,6 @@ RAFCE - React Arrow Function export Component
 REN - render() { return( ) }
 SST - this.setState({ })
 
-
 extensions
 ===========
 1. React Snippet
@@ -411,14 +352,9 @@ extensions
 6. vscode-icons
 7. Thunder Client
 
-
-
 Browser extension
 =================
 json viewer
-
-
-
 
 React Plugins
 =============
@@ -426,10 +362,6 @@ React Plugins
 2. React-sight
 3. Redux DevTools
    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-
-
-
-
 
 React.StrictMode
 ================
@@ -449,9 +381,6 @@ React.StrictMode
 Note: StrictMode renders components twice (on dev but not production) in order to
       detect any problems with our code and warn us about them.
 
-
-
-
 Component
 =========
 -Components are the most basic UI building block of a React application.
@@ -461,7 +390,6 @@ Component
 -A React application contains a tree of components.
 -React components let you split the UI into independent, reusable pieces,
   and think about each piece in isolation.
-
 
 2 types Of Component
 ====================
@@ -494,16 +422,12 @@ class Welcome extends React.Component {
   an HTML tag and a component instance. If the first letter of a name is capitalized,
   then JSX realizes it’s a component instance; if not, then it’s an HTML tag.
 
-
 	Functional Component			Class Component
 	---------------------			---------------
 1. No 'this' keyword				1. More feature rich
 2. solution without state			2. Maintain own private data- state
 3. Mainly for UI 					3. Complex UI Logic
 4. Stateless/dumb/Presentational    4. Provide Life cycle hooks
-
-
-
 
 When to use a Class Component over a Function Component?
 ========================================================
@@ -514,9 +438,6 @@ When to use a Class Component over a Function Component?
  in function component also.
 -So, it is always recommended to use Function components, unless you need a React functionality whose Function component equivalent is not present yet, like Error Boundaries.
 
-
-
-
 How to Use Bootstrap in a React application
 ===========================================
 1. install bootstrap
@@ -525,27 +446,20 @@ How to Use Bootstrap in a React application
    npm i bootstrap     (latest version)
    npm i bootstrap-icons
 
-
 2. use 'bootstrap.min.css' in index.js file
    import "bootstrap/dist/css/bootstrap.min.css";
    import "bootstrap/dist/js/bootstrap.bundle.min.js";
    import 'bootstrap-icons/font/bootstrap-icons.css';
-
 
 How to Use Bootstrap in a React application using CDN Link
 ===========================================================
 -Bootstrap can be used in a react application just by adding the below CDN link in 'index.html'
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
-
-
 How to use Bootstrap icons
 ==========================
 <i className="bi-alarm"></i>
 <i className="bi-airplane" style={{ fontSize: "2rem", color: "cornflowerblue" }}></i>
-
-
-
 
 How to use React-icons
 ======================
@@ -556,8 +470,6 @@ How to use React-icons
    import { BsFillCalendarDateFill,BsFillClockFill } from 'react-icons/bs';
 3. use the Icons
    <FaEdit /> <FaTrash />
-
-
 
 Fragments
 ==========
@@ -583,8 +495,6 @@ Fragments
 		<button>I am another element</button>
    </>
 
-
-
 CSS in React
 ============
 different ways to add CSS:
@@ -593,7 +503,6 @@ different ways to add CSS:
 3. global css(index.css)
 4. CSS Modules
 5. Conditional CSS
-
 
 CSS Modules
 ===========
@@ -608,10 +517,6 @@ CSS Modules
 	import './another-stylesheet.css'; // Import regular stylesheet
 	<button className={styles.error}>Error Button</button>;
 -it will only apply the classname from css module even if both files have same 'error' class;
-
-
-
-
 
 Conditional Rendering
 =====================
@@ -633,8 +538,6 @@ Conditional Rendering
 Ternary-  		<div>{flag ? <h1>Helllloooooo</h1> : null}</div>
 Short Circuit-  <div>{flag && <h1>Helllloooooo</h1>}</div>
 
-
-
 List Items - Lists and Keys
 ===========================
 -A 'key' is a special attribute which should be included while creating List Items.
@@ -653,8 +556,6 @@ List Items - Lists and Keys
 -Why map() is used to iterate array instead of forEach()
  JSX needs an array of items to render,forEach() does not return anything (i.e it returns undefined). map() returns an array.
 
-
-
 read data from a JSON file
 ==========================
 1. create a JSON file (employees.json/products.json/countries.json)
@@ -664,15 +565,12 @@ read data from a JSON file
    {countries.map((country,ind)=>{
        return <option key={ind} value={country} />
    })}
-
-
+   
 Assignment
 ==========
 1. create products.json with list of products.
    https://fakestoreapi.com/products
 2. display the products in table & card
-
-
 
 forceUpdate
 ===========
@@ -688,8 +586,6 @@ forceUpdate
  this.props and this.state in render().
 -In class components,this.forceUpdate() is used to force a re-render.
 -In Functional components,there is no concept of force re-render.
-
-
 
 props
 =====
@@ -708,11 +604,8 @@ props
  this.props.propName; (Class Component)
  props.propName; (Functional Component)
 
-
 1.They are immutable. data coming from the parent should not be changed by child components. we will get an error if you try to change their value.
 2.data with props are being passed in a uni-directional flow. (one way from parent to child)
-
-
 
 Props De-structuring
 ====================
@@ -724,9 +617,6 @@ Props De-structuring
  export default function Greet({ name, msg }){}
 -we de-structure props in the render() function.(class Component)
  ex: let { pId, name, price } = this.props.product;
-
-
-
 
 PropTypes
 =========
@@ -741,8 +631,7 @@ PropTypes
 		variableName: PropTypes.string
 	};
 
-
-  optionalArray: PropTypes.array,
+optionalArray: PropTypes.array,
   optionalBool: PropTypes.bool,
   optionalFunc: PropTypes.func,
   optionalNumber: PropTypes.number,
@@ -757,9 +646,6 @@ PropTypes
     fontSize: PropTypes.number
   }),
 
-
-
-
 Requiring Props
 ===============
 -If prop values are not passed to a certain component, no error will be thrown.Instead, within the component that prop will have a value of 'undefined'.
@@ -772,8 +658,6 @@ Student.propTypes = {
   age: PropTypes.number  // Optional Prop
 }
 
-
-
 Default props
 =============
 -defaultProps allows to set default value for props.
@@ -784,8 +668,6 @@ Default props
 -Functional Component & destructuring
  export default function Greet({name , msg='good morning'}) {
  }
-
-
 
 Props.children
 ==============
@@ -800,8 +682,6 @@ Props.children
   }
 }
 
-
-
 Ensuring Single Child
 =====================
 -We can use PropTypes.element to enforce that only a single child can be passed
@@ -812,8 +692,6 @@ Greet.propTypes = {
     children: PropTypes.element
 };
 
-
-
 Prop Drilling
 =============
 -Prop drilling is the process in a React app where props are passed from one component to another by going through other parts that do not need the data, but only help in passing it through the intermediate components.
@@ -823,15 +701,12 @@ Prop Drilling
  This can cause major issues with component reusability and app performance.
 -This Problem Can be avoided by using concepts like 'Context API' & 'REDUX'
 
-
-
 States
 ======
 -the State of a component is an object that holds some information
  that may change over the lifetime of the component.
 -whenever the state object changes,react will re-render the component.
  render() gets re-invoked.
-
 
 State in Class Component
 ========================
@@ -847,7 +722,6 @@ State in Class Component
  place that code in the callback function which is the second arguement to setState()
  ex:-  setState( {} , ()=>{} );
 
-
 Note:
 -----
 -setState() actions are asynchronous. setState() doesn’t immediately mutate this.state.
@@ -856,8 +730,6 @@ Note:
  we need to pass a function as an arguement to setState() instead passing an object.
  ex:- this.setState({ value: this.state.value + 1 });
       this.setState(prevState => ({ value: prevState.value + 1 }));
-
-
 
 State in Functional Component
 =============================
@@ -888,10 +760,6 @@ State in Functional Component
 4. props - Functional Comp				4. useState()      - Functional Comp
    this.props - class comp		  		   this.state={}   - Class Comp
 
-
-
-
-
 How to use SweetAlert
 =====================
 https://sweetalert2.github.io/#examples
@@ -904,9 +772,6 @@ https://sweetalert2.github.io/#examples
 	  'You clicked the button!',
 	  'success'
 	)
-
-
-
 
 How to use react-modal
 ======================
@@ -930,8 +795,6 @@ How to use react-modal
         <button onClick={closeModal}>close</button>
         <div>I am a modal</div>
     </Modal>
-
-
 
 How to use react-bootstrap modal
 ================================
@@ -957,7 +820,6 @@ How to use react-bootstrap modal
     </Modal>
 	<Button onClick={handleShow}>click me</Button>
 
-
 Search
 ======
 1. Install react-js-search from npm
@@ -973,8 +835,6 @@ Search
         placeHolderText={"Search here..."}
         data={employees}
       />
-
-
 
 Pagination
 ==========
@@ -993,9 +853,6 @@ Pagination
         previousLabel="< previous"
         renderOnZeroPageCount={null}
       />
-
-
-
 
 React Events
 =============
@@ -1026,7 +883,6 @@ React Events
         console.log(this.state.counter)
     }
 
-
 -If you want to send parameters into an event handler, you have two options:
 1. Make an anonymous arrow function:
 	shoot = (a) => {
@@ -1034,17 +890,14 @@ React Events
    }
    <button onClick={() => this.shoot("Goal")}>Take the shot!</button>
 
-
 2. Bind the event handler to this
    shoot(a) {
     alert(a);
   }
   <button onClick={this.shoot.bind(this, "Goal")}>Take the shot!</button>
 
-
 -If you send arguments without using the bind method, (this.shoot(this, "Goal") instead of this.shoot.bind(this, "Goal")),
 the shoot function will be executed when the page is loaded instead of waiting for the button to be clicked.
-
 
 Single Event Handler for multiple input elements
 =================================================
@@ -1052,9 +905,6 @@ Single Event Handler for multiple input elements
     const { name, value } = e.target;
     this.setState({ [name]: +value });
   };
-
-
-
 
 SyntheticEvent
 ==============
@@ -1064,24 +914,16 @@ SyntheticEvent
   <button onClick={f1}>click me</button>  // bubbling
   <button onClickCapture={f1}>click me</button>  // capturing
 
-
-
-
-
 Component Communication
 =======================
 ->Parent to Child :  props
 ->Child to Parent :  callback and states
 ->Between Siblings :  Combine the above 2
 
-
 Child To Parent:
 1. Define a callback in parent which takes the data as a parameter.
 2. Pass that callback as a prop to the child.
 3. Call the callback function using this.props.[callback] in the child, pass in the data as the argument.
-
-
-
 
 Component vs PureComponent
 ==========================
@@ -1095,8 +937,6 @@ Component vs PureComponent
 -in Functional components, re-render happens only if the state changes.
 -Every Functional Component is a Pure-Component.
 
-
-
 React Memo Component
 ====================
 -Introduced in React v16.6.  This improves performance.
@@ -1105,9 +945,6 @@ React Memo Component
 -When a component is wrapped in React.memo(), React renders the component only if the props those are passed to that component changes.
 -React always re-renders the component if the state changes, even if the component is wrapped in React.memo()
 -ex: export default React.memo(MyComponent);
-
-
-
 
 useMemo()
 ========
@@ -1122,9 +959,6 @@ ex:
   // const calculation = expensiveCalculation(count); // function gets called on every state change
   // const calculation = useMemo(() => expensiveCalculation(count), []); // function gets called on page load
   const calculation = useMemo(() => expensiveCalculation(count), [count]); // function gets called on count change
-
-
-
 
 useCallBack()
 =============
@@ -1144,10 +978,6 @@ ex:
     setTodos((t) => [...t, "New Todo"]);
   }, []);
 
-
-
-
-
 LifeCycle Hooks
 ===============
 -Every component in React goes through a lifecycle of events.
@@ -1155,7 +985,6 @@ LifeCycle Hooks
 	1.Mounting - (constructor,getDerivedStateFromProps,render,componentDidMount)
 	2.Updating - (getDerivedStateFromProps,shouldComponentUpdate,render, 		      getSnapshotBeforeUpdate, componentDidUpdate)
 	3.Unmounting - (componentWillUnmount)
-
 
 Mounting: means putting elements into the DOM.
 ---------------------------------------------
@@ -1166,7 +995,6 @@ Mounting: means putting elements into the DOM.
 
 Note:- The render() method is required and will always be called,
 	   the others are optional and will be called if you define them.
-
 
 constructor()
 -----------
@@ -1180,7 +1008,6 @@ constructor()
 -setState() method should not be called in the constructor(). we will get console error
  error - Can't call setState on a component that is not yet mounted
 
-
 static getDerivedStateFromProps()
 --------------------------------
 -The getDerivedStateFromProps() method is called right before rendering the element(s) in the DOM.
@@ -1188,13 +1015,10 @@ static getDerivedStateFromProps()
 -It takes (props,state) as argument, and returns an object with changes to the state.
 -only fires when the parent causes a re-render and not as a result of a local setState.
 
-
 render()
 -------
 -The render() method is required, and is the method that actual outputs HTML to the DOM.
 -it gets re-invoked when state/props data changes.
-
-
 
 componentDidMount()
 ------------------
@@ -1202,8 +1026,6 @@ componentDidMount()
 -This is a good place to initiate the network request.
 -if we are going to fetch any data from an API then API call should be placed in this lifecycle method,and then we get the response, we can call the setState() method and render the element with updated data.
 -good place for DOM manipulation.
-
-
 
 Updating
 =========
@@ -1213,13 +1035,11 @@ Updating
 4.getSnapshotBeforeUpdate(prevProps, prevState)
 5.componentDidUpdate()
 
-
 getDerivedStateFromProps()
 -----------------------
 -while updating state/props getDerivedStateFromProps() method is called.
 -This is the first method that is called when a component gets updated.
 -This is still the natural place to set the state object based on the initial props.
-
 
 shouldComponentUpdate()
 ----------------------
@@ -1227,17 +1047,14 @@ shouldComponentUpdate()
 -The default value is true.
 -shouldComponentUpdate() lifecycle shouldn't be added if the class is extending React.PureComponent.
 
-
 getSnapshotBeforeUpdate(prevProps, prevState)
 ------------------------
 -In the getSnapshotBeforeUpdate(prevProps, prevState) method we have access to the props and state before the update,meaning that even after the update, we can check what the values were before the update.
-
 
 example:
 -When the component is mounting it is rendered with the favorite color "red".
 -When the component has been mounted, a timer changes the state, and after one second,the favorite color becomes "yellow".
 -This action triggers the update phase, and since this component has a getSnapshotBeforeUpdate() method,this method is executed, and writes a message to the empty DIV1 element.
-
 
 componentDidUpdate()
 -------------------
@@ -1245,9 +1062,6 @@ componentDidUpdate()
 -componentDidUpdate() is invoked immediately after the state is updated.
 -This method is not called for the initial render,componentDidMount() will be called for the initial render.
 -it gets called only when state/props gets updated.
-
-
-
 
 Unmounting - Removing the component from DOM
 ==========
@@ -1261,8 +1075,6 @@ componentWillUnmount()
  or cleaning up any DOM elements created in componentDidMount.
 -clearTimeout, ClearInterval , Unsubscribe, detachEventHandlers
 
-
-
 useEffect()
 ----------
 -useEffect serves the same purpose as componentDidMount, componentDidUpdate, and componentWillUnmount.
@@ -1273,7 +1085,6 @@ useEffect()
 -If 2nd arguement is present, effect will only activate if the values in the list change.
 -If 2nd argument is not present, effect runs everytime there is a state change.
 -we can have many useEffects() in a component to track changes for diff variables.
-
 
 How to use componentWillUnmount in Functional Components
 ========================================================
@@ -1289,15 +1100,12 @@ const ComponentExample => () => {
 
 Note: When the state is updated, the component gets re-rendered, Hence the component gets unmounted and gets rendered again.
 
-
 useLayoutEffect
 ===============
 -useLayoutEffect is a version of useEffect that fires before the browser repaints the screen.
 -This runs synchronously immediately after React has performed all DOM mutations.
 -useLayoutEffect(callBack, dependencies?)
 -useLayoutEffect: If you need to mutate the DOM inside the effect()
-
-
 
 Refs (Template Reference Variable)
 ==================================
@@ -1317,8 +1125,6 @@ Refs (Template Reference Variable)
      alert(inputRef1.value)
 
 -'Ref forwarding' is a feature that lets some components take a ref they receive,and pass/forward it further down to a child.
-
-
 
 
 Forms
@@ -1358,8 +1164,6 @@ Forms
 	  <option value="Fiat">Fiat</option>
 	</select> //wrong
 
-
-
 Feature									Uncontrolled		Controlled
 -----------------------------------------------------------------------
 One-time value retrieval
@@ -1381,15 +1185,11 @@ dynamic inputs								no					yes
 -Let React to specify the initial value, but leave subsequent updates uncontrolled.
 -To handle this case, you can specify a 'defaultValue' attribute instead of value.
 
-
 -Controlled form components are defined with a value property.
 -value of controlled input is managed by React,
 -With a controlled component, the input’s value is always driven by the React state.
 -component state and the input value is in sync at all the times.
  <input onChange={this.onChange} value={this.state.name} />
-
-
-
 
 HTTP Methods
 ============
@@ -1409,7 +1209,6 @@ PATCH - update/modify a particular resource(partial update)
 DELETE - Remove a resource/delete a record from DB
 		 Delete naukri account
 
-
 PUT vs POST
 -----------
 -POST for CREATE operation, PUT is for create & update.
@@ -1420,13 +1219,10 @@ PUT vs POST
 -Use PUT when you want to modify a singular resource which is already a part of resources collection.
 -Use POST when you want to add a child resource under resources collection.
 
-
 PUT vs PATCH
 ------------
 -PUT is used to replace an existing resource.
 -PATCH is used to apply partial modifications to a resource.
-
-
 
 http status codes
 =================
@@ -1436,8 +1232,6 @@ http status codes
 4xx Client Error   (400-Bad Request,401-Unauthorized,403-Forbidden,404-Not Found)
 5xx Server Error   (500-Internal Server Error,502-Bad Gateway,503-Service Unavailable)
 
-
-
 POSTMAN
 =======
 -Application, used to Test REST APIs. (chrome://apps/)
@@ -1445,8 +1239,6 @@ POSTMAN
 -Browser Extension / Application
  https://www.postman.com/downloads/
 -Thunder Client(VSCode Extension) is an alternate to postman
-
-
 
 Fake Online REST API for Testing
 --------------------------------
@@ -1459,8 +1251,6 @@ Fake Online REST API for Testing
 7. https://my-json-server.typicode.com/horizon-code-academy/fake-movies-api/movies
 8. https://api.publicapis.org/entries
 
-
-
 Create REST API with json-server
 --------------------------------
 https://medium.com/codingthesmartway-com-blog/create-a-rest-api-with-json-server-36da8680136d
@@ -1472,7 +1262,6 @@ https://medium.com/codingthesmartway-com-blog/create-a-rest-api-with-json-server
 3. start json server
    json-server --watch db.json --port=4000
 
-
 http://localhost:3000/employees
 GET    /employees
 GET    /employees/{id}
@@ -1480,8 +1269,6 @@ POST   /employees
 PUT    /employees/{id}
 PATCH  /employees/{id}
 DELETE /employees/{id}
-
-
 
 Ways of Fetching Data
 =====================
@@ -1491,15 +1278,11 @@ There are many ways to extract data from API in React:
 3. using Axios library
 4. using custom hooks
 
-
-
 HTTP with fetch()
 =================
 fetch('https://jsonplaceholder.typicode.com/todos/1')
   .then(response => response.json())
   .then(finaldata => console.log(finaldata))
-
-
 
 Async Await
 ===========
@@ -1508,10 +1291,6 @@ Async Await
     const productsJSON = await products.json();
     setProducts(productsJSON);
   };
-
-
-
-
 HTTP with axios
 ===============
 1. install axios
@@ -1525,8 +1304,6 @@ HTTP with axios
 		setUsers(response.data);
     };
 
-
-
 		Axios												Fetch
 ===========================================================================
 -built-in XSRF protection.						-Fetch does not.
@@ -1537,8 +1314,6 @@ HTTP with axios
 -allows cancelling request and request timeout.	Fetch does not.
 -has the ability to intercept HTTP requests.	Fetch, by default, doesn’t provide a way to intercept requests.
 -has built-in support for download progress.	Fetch does not support upload progress.
-
-
 
 Create an Axios Instance
 ========================
@@ -1553,15 +1328,11 @@ Create an Axios Instance
    import client from 'api.js'
    client.get('/users')
 
-
-
 Making multiple requests with axios
 ===================================
 const promise1 = axios.get('https://api.github.com/users/defunkt')
 const promise2 = axios.get('https://api.github.com/users/evanphx')
 const [response1, response2] = await axios.all([promise1, promise2]);
-
-
 
 Http Interceptors
 =================
@@ -1585,7 +1356,6 @@ export function myInterceptor() {
 }
 -call the above function in app.js
 
-
 response interceptor use cases -
 -Assume you got a response, and judging by the API responses you want to deduce that the user is logged in.
  So, in the response interceptor, you can initialize a class that handles the user logged in state and
@@ -1605,8 +1375,6 @@ axios.interceptors.response.use(
     throw err;
   }
 );
-
-
 Run interceptor only for few APIs
 ---------------------------------
 axios.interceptors.request.use((req) => {
@@ -1617,13 +1385,10 @@ axios.interceptors.request.use((req) => {
     return req;
  });
 
-
 remove an interceptor
 ---------------------
 const myInterceptor = axios.interceptors.request.use(function () {/*...*/});
 axios.interceptors.request.eject(myInterceptor);
-
-
 
 add interceptors to a custom instance of axios
 -----------------------------------------------
@@ -1631,9 +1396,6 @@ const client = axios.create();
 client.interceptors.request.use((req) => {
 	// Logic
 });
-
-
-
 
 React Higher Order Components (HOCs)
 =============================
@@ -1650,11 +1412,6 @@ use cases:
 -Components that need logged in user data.
 -Showing multiple lists(e.g. Users, Locations) with search feature.
 
-
-
-
-
-
 Routing
 =======
 -Single Page Applications(SPAs) are web applications that load a single HTML page and
@@ -1667,8 +1424,6 @@ Routing
 -The browser back and forward button should work as expected.
 -Routing links together your application navigation with the navigation features offered by the browser: the address bar and the navigation buttons.
 -React Router offers a way to write your code so that it will show certain components of your app  only if the route matches what you define.
-
-
 
 Types of routes:
 ================
@@ -1683,13 +1438,10 @@ https://application.com/#/dashboard   // HashRouter (IE<9)
 -BrowserRouter uses the History API, which is relatively recent, and not supported in IE9 and below.
 -If you don’t have to worry about older browsers, BrowserRouter is the recommended one to use.
 
-
 -The 3 components you will interact the most while working with React Router are:
 	1. BrowserRouter, usually aliased as Router (wraps all your Route components)
 	2. Link		(used to generate links to your routes)
 	3. Route    (showing or hiding the components they contain)
-
-
 
 Steps for Routing
 =================
@@ -1718,8 +1470,6 @@ Steps for Routing
       <Link to="/shop">Shop Now </Link>
     </div>
 
-
-
 Link vs NavLink
 ===============
 -When we use <Link> there isn't any active class on selected element.
@@ -1727,13 +1477,9 @@ Link vs NavLink
 -add below css:
 	nav a.active{text-decoration:none;font-weight:bolder;background-color: aqua}
 
-
-
 Navigate from one Route to another Route
 =========================================
 <Link to="/products">go to Product</Link>
-
-
 
 Navigating Programatically
 ==========================
@@ -1755,26 +1501,20 @@ export default function AboutUs() {
   );
 }
 
-
 Navigate to previous route
 ==========================
 const navigate = useNavigate();
 <button onClick={()=>navigate(-1)}>Go Back</button>
-
 
 Navigate to forward/next route
 ==============================
 const navigate = useNavigate();
 <button onClick={()=>navigate(1)}>Go Next</button>
 
-
-
-
 Route Params
 ============
 1. Path params    (productdetails/101)
 2. Query Params   (search?name=sachin&age=25)
-
 
 Path Params
 -----------
@@ -1785,8 +1525,6 @@ Path Params
 3. collect the params data and display
    const { id } = useParams();
    <h1>This is the details of product - {id}</h1>
-
-
 
 Query params
 ------------
@@ -1811,8 +1549,6 @@ Query params
     console.log(currentParams); // get new values onchange
   }, [searchParams]);
 
-
-
 Nested Routing
 ==============
 -nested routing is used so that a parent component has control over its child component
@@ -1829,9 +1565,6 @@ Nested Routing
       </div>
       <Outlet />
 
-
-
-
 Index Route
 ===========
 -A child route with no path that renders in the parent's outlet at the parent's URL.
@@ -1843,7 +1576,6 @@ Index Route
     </Route>
 	<Outlet />
 
-
 Protected Routes
 ================
 -Protected Routes are routes that can only be accessed if a condition is met(usually, if user is properly authenticated).
@@ -1852,8 +1584,6 @@ Protected Routes
 -create a component that accepts component and other route details as props.
 -check a condition to confirm if user is authenticated or not.
 -if the value is true, render the component, else, Redirect route to /signin page.
-
-
 
 Replace
 =======
@@ -1866,11 +1596,6 @@ navigate(to, { replace: true })
 Exact
 =====
 -The exact param disables the partial matching for a route and makes sure that it only  returns the route if the path is an EXACT match to the current url.
-
-
-
-
-
 
 Code Splitting/Lazy Loading
 ===========================
@@ -1886,11 +1611,6 @@ Code Splitting/Lazy Loading
  <Suspense fallback={<div>Loading...</div>}>
      <OtherComponent />
  </Suspense>
-
-
-
-
-
 
 Error Boundaries
 ================
@@ -1908,10 +1628,6 @@ Error Boundaries
  An error boundary can’t catch an error within itself.
 -We can use static getDerivedStateFromError() to render a fallback UI when an error has been thrown, and can use componentDidCatch() to log error information.
 
-
-
-
-
 Build and Deploy React App
 ==========================
 -Building an application means creating identifiable software assembly from
@@ -1922,7 +1638,6 @@ Build and Deploy React App
 
   https://cra.link/deployment
 
-
 Deploy in a Local Server
 ========================
 -Install a server and deploy our project
@@ -1931,23 +1646,14 @@ Deploy in a Local Server
  2. go to project(build) folder, open command prompt and run the below command
     'serve'  or  'serve -l 7000'
 
-
-
-
-
 Generated Files:
 	main.[hash].js  -  	This is your application code
     [number].[hash].chunk.js  -  vendor code
 	runtime-main.[hash].js  -   webpack runtime logic which is used to load and run your application
 
-
-
 Deploy React in GitHub
 ======================
 https://create-react-app.dev/docs/deployment/#github-pages
-
-
-
 
 WebPack
 -------
@@ -1956,8 +1662,6 @@ WebPack
  HTML, CSS, and images if the corresponding loaders are included.
 -webpack takes modules with dependencies and generates static assets
  representing those modules.
-
-
 
 package.json vs package-lock.json
 =================================
@@ -1971,8 +1675,6 @@ package.json vs package-lock.json
  in package.json (^) checks if there is a newer version under 1.x.x if 1.4.1 is installed in package-lock.json - there is neither ~ nor ^
 -Package-lock.json maintains the Peer-dependencies.
 
-
-
 Dependencies VS Dev-Dependencies
 ================================
 - if we need any libraries only at the time of development but not in production, those libraries should be added to DevDependencies.
@@ -1982,8 +1684,6 @@ Dependencies VS Dev-Dependencies
 - if we need a library in both development and production environment, then those libraries should be part of dependencies.
   (bootstrap,sweetalert,react-modal)
    ex: npm i bootstrap
-
-
 
 Available Scripts
 =================
@@ -2000,8 +1700,6 @@ Available Scripts
 				you can eject at any time. This command will remove the single build
 				dependency from your project.
 
-
-
 ESLint
 ======
 1. npm i eslint -g
@@ -2009,8 +1707,6 @@ ESLint
          (OR)
    npx eslint --init
 3. eslint .
-
-
 
 Environment Variables
 =====================
@@ -2030,9 +1726,6 @@ Environment Variables
 	<h1>Your name is: {process.env.REACT_APP_MY_NAME}</h1>
 
 https://create-react-app.dev/docs/adding-custom-environment-variables/
-
-
-
 
 Context API
 ===========
@@ -2058,15 +1751,10 @@ Context API
 			{value => /* render something based on the context value */}
 		</MyContext.Consumer>
 
-
-
 Read Context data in Function Component
 ---------------------------------------
 const myContextObj = useContext(myContext);
 <div>Context Data is: {myContextObj}</div>
-
-
-
 
 React Flux
 ==========
@@ -2086,21 +1774,17 @@ Flux Benefits
 
 View --> Action --> Dispatcher --> store --> View(Re-render)
 
-
 Actions − Actions are sent to the dispatcher to trigger the data flow.
 Dispatcher − This is a central hub of the app. All the data is dispatched and sent to the stores.
 Store − Store is the place where the application state and logic are held.
 		Every store is maintaining a particular state and it will update when needed.
 View − The view will receive data from the store and re-render the app.
 
-
-
 FLUX VS REDUX
 =============
 -Flux can have multiuple Stores, But Redux will have only one store.
 -Flux has Dispatcher , Redux has Reducer.
 -State is Mutable , Immutable state.
-
 
 Redux
 =====
@@ -2116,15 +1800,12 @@ Redux
 
 View/UI-----> Action --> Reducer --> Store/State --> View
 
-
 3 Core Concepts in Redux
 ========================
 1. Store : Holds the state(data) of our application. (shop)
 2. Action : Describes the changes in the state of the application.
 			(what happened)(purchase a TV)
 3. Reducer : Ties the store and actions together. (shopKeeper)
-
-
 
 3 Principles
 ===========
@@ -2139,7 +1820,6 @@ View/UI-----> Action --> Reducer --> Store/State --> View
    These ensures that neither the views nor the network callbacks will ever write directly to the state
    Reducer - (previous state, action)=>newState
 
-
 Store
 ======
 -One store for the entire application.
@@ -2149,7 +1829,6 @@ Store
 -Register Listeners via subscribe(listner)
 -Handles unregistering of listners via the function returned by subscribe(listner).
 
-
 Actions
 =======
 -The only way your application can interact with the store.
@@ -2157,7 +1836,6 @@ Actions
 -plain javascript objects.
 -Have a 'type'  property that indicates the type of action being performed.
 -The type of property is typically defined as a string constants.
-
 
 Reducers
 =========
@@ -2171,7 +1849,6 @@ Reducers
 
 Context API: useful and ideal for small applications where state changes are minimal.
 Redux: Perfect for larger applications where there are high-frequency state updates.Redux gives a more structural and advanced way of doing state management.
-
 
 Redux Toolkit
 ==============
@@ -2193,9 +1870,6 @@ Redux Toolkit
 	Read data from the store with the useSelector hook
 	Get the dispatch function with the useDispatch hook, and dispatch actions as needed
 
-
-
-
 REDUX Middlewares
 =================
 -basic Redux store enables to perform synchronous updates only.
@@ -2204,7 +1878,6 @@ REDUX Middlewares
 -Middleware helps with logging, error reporting, making asynchronous requests.
 
 store-->view --> Action --> Middleware --> Reducer --> Store
-
 
 Thunks
 ======
@@ -2217,8 +1890,6 @@ Thunks
 -a thunk is a function that (optionally) takes some parameters and returns another function.
  The inner function takes a dispatch function and a getState function -- both of which will be supplied by the Redux-Thunk middleware.
 
-
-
 Thunks vs Sagas
 ===============
 -Redux-thunk and Redux-saga are both middleware libraries for Redux.
@@ -2226,11 +1897,6 @@ Thunks vs Sagas
 -Redux-Saga allows to express complex application logic as pure functions called sagas.
 -Pure functions are desirable from a testing standpoint because they are predictable and repeatable, which makes them relatively easy to test.
 -Sagas are implemented through special functions called generator functions.
-
-
-
-
-
 
 React Hooks
 ===========
@@ -2243,7 +1909,6 @@ React Hooks
 	useCallBack(), useMemo(), useId(),useDebugValue(),useDeferredValue()
 -we can also create our own Hooks to reuse stateful behavior between different components.
 
-
 Rules of Hooks
 ==============
 -Only call Hooks at the top level.
@@ -2251,7 +1916,6 @@ Rules of Hooks
 -Only call Hooks from React function components.
  Don’t call Hooks from regular JavaScript functions.
 -React built-in Hooks can be called from custom hooks.
-
 
 useState
 --------
@@ -2262,13 +1926,11 @@ ex: const [count, setCount] = useState(0);
   a. the current state
   b. a function that updates it.
 
-
 const [count, setCount] = useState(0);
 			(OR)
 var countStateVariable = useState(0); // Returns a pair
 var count = countStateVariable[0]; // First item in a pair
 var setCount = countStateVariable[1]; //second item
-
 
 useEffect
 ---------
@@ -2279,8 +1941,6 @@ useEffect
 -If 2nd arguement is present, effect will only activate if the values in the list change.
 -you cannot return a Promise from useEffect.
 
-
-
 useReducer
 ----------
 -useReducer is a hook,convenient for dealing with more complex state changes in React components.
@@ -2289,7 +1949,6 @@ useReducer
  useReducer(<reducer>, <initialState>)
 -The useReducer Hook returns the current state and a dispatch method.
  const [todos, dispatch] = useReducer(reducer, initialTodos);
-
 
 Redux:
 -----
@@ -2307,7 +1966,6 @@ useReducer:
 -multiple stores maybe(reducers that can act as store)
 -more suitable for small projects
 
-
 useId()
 -------
 -useId() is a hook for generating unique IDs that can be used with HTML Elements.
@@ -2322,7 +1980,6 @@ useId()
    <label htmlFor={id + '-lastName'}>Last Name</label>
    <input id={id + '-lastName'} type="text" />
 
-
 Custom Hook
 ===========
 -Custom Hooks are reusable functions.
@@ -2333,9 +1990,6 @@ Custom Hook
 -Helps to Avoid repetitive and redundant stateful logic inside multiple components.
 -Custom Hooks offer the flexibility of sharing logic.
 -Each call to a Custom Hook gets isolated state.
-
-
-
 
 React Profiler
 ==============
@@ -2358,12 +2012,9 @@ Pre-requisites:
 -The application should have React version 16.5 or above.
 -The React DevTools Extension needs to be installed in your browser.
 
-
 <Profiler id="counterExample" onRender={console.log}>
     <StateDemo2 />
 </Profiler>
-
-
 
 Unit Testing
 ============
@@ -2371,7 +2022,6 @@ Unit Testing
 -Improves your application architecture and maintainability.
 -Provides quick feedback on file-save, tells you whether the changes you made worked or not.
 -This can replace console.log() and clicking around in the UI to test changes.
-
 
 Jest
 =====
@@ -2386,9 +2036,6 @@ Jest
   npm i @testing-library/jest-dom
 -need to add 'react-test-renderer' for rendering snapshots.
   npm i react-test-renderer
-
-
-
 -To run testcases,run the below command
  npm run test / npm test
 -To run only 1 test file
@@ -2396,9 +2043,6 @@ Jest
 -To run only one test with Jest, temporarily change that test command to a test.only
  test.only("renders learn react link", () => {
  });
-
-
-
 
 terminologies:
 -------------
@@ -2414,13 +2058,10 @@ it() (OR) test()
 -it() allows us to write some text describing what a test should successfully achieve.
 -test() method can be used instead of it() and vice-versa.Both are valid methods.
 -test.only() executes only that test-case from that files & test-cases from other files skips the test-cases present in the same file
-
 expect()
 -The expect() compares actual value with the expected value.
 -ex: expect(add(2,3)).toBe(5);
     actual=method's return value   expeted=5
-
-
 
 Jest Matchers
 =============
@@ -2440,7 +2081,6 @@ toBeLessThanOrEqual()
 toMatch(regex)
 toContain()
 
-
 Jest Global Functions
 =====================
 beforeAll()       - Before All the Testcases (1)
@@ -2452,8 +2092,6 @@ it.skip()    - skips this test case, executes other test cases
 it.only()    - executes only this test case, skips other testcases
 
 https://create-react-app.dev/docs/debugging-tests/
-
-
 Snapshot Testing
 ----------------
 -Snapshot tests are a very useful tool whenever you want to make sure your UI does not change unexpectedly.
@@ -2462,10 +2100,6 @@ Snapshot Testing
 -snapshot testing adds a __snapshots__ folder inside __test__ folder
  if any accidental change happens, testcase will fail
  Press u to update failing snapshots.
-
-
-
-
 
 Server Side Rendering
 =====================
@@ -2480,8 +2114,6 @@ Server Side Rendering
 -The user needs fast internet and an up-to-date browser to avoid issues in displaying the content
 -making the initial loading slower and not SEO friendly
 
-
-
 GraphQL
 =======
 -GraphQL overcomes major shortcomings of REST.
@@ -2490,13 +2122,7 @@ GraphQL
 -in GraphQL,the client Requests the data with queries.
 -it allows the client to query only the data that they need.
 
-
 -The most popular  GraphQL library is Apollo Client.
-
-
-
-
-
 
 React Resources / Links
 ========================
